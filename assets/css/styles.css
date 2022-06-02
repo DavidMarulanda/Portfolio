@@ -1,0 +1,1523 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-fondo: #242635;
+    --color-title: #34B0BE;
+    --color-font: #fff;
+    --color-text: #D1CECA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {	
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--color-fondo);
+}
+
+img {
+    width: 100%;
+}
+
+/* =========== Helper ============= */
+
+.title {
+    color: var(--color-title);
+    font-size: 10rem;
+}
+
+.subtitle {
+    color: #242635;
+}
+
+.intro {
+    color: var(--color-font);
+    font-size: 10rem;
+}
+
+.title__text {
+    color: var(--color-font);
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.text {
+    color: var(--color-font);
+    font-size: 2rem;
+}
+
+.c-primary { 
+    color: var(--color-title);
+}
+
+.c-white { 
+    color: var(--color-font);
+}
+
+.p-relative { 
+    position: relative;
+}
+
+.p-absolute { 
+    position: absolute;
+}
+
+.p-static { 
+    position: static;
+}
+
+
+/*  ==============  NAV ============*/
+
+.header {
+    background: var(--color-fondo);
+    height: 6rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    transition: all .5s;
+}
+
+.header_bar {
+    border-bottom: 2px solid var(--color-title);
+    box-shadow: 0px 2px 10px 10px rgba(16, 104, 155, 0.2);
+    transition: all .5s;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    order: 1;
+    position: relative;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 6rem;
+    list-style: none;
+}
+
+.nav_menu-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav_menu-item {
+    font-size: 1.8rem;
+    margin: 0 2.5rem;
+    line-height: 6rem;
+    font-weight: 500;
+    width: max-content;
+}
+
+.nav_menu-link:hover,
+.nav_menu-link_active {
+    color: #34B0BE;
+    text-shadow: 0 1px 5px #34B0BE;
+    transition: .5s
+}
+
+.nav_toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    padding: 0 2rem;
+    line-height: 6rem;
+    display: none;
+}
+
+@media (max-width: 945px) {
+    
+    .nav_menu {
+        flex-direction: column;
+        margin-right: 2rem;
+        background: #242635;
+        position: fixed;
+        left: 0;
+        top: 6rem;
+        width: 100%;
+        left: 100%;
+        transition: .5s;
+    }
+
+    .nav_toggle {
+        display: block;
+        margin: 0 2rem;
+        font-size: 4rem;
+    }
+
+    .nav_toggle:hover {
+        color: #34B0BE;
+        text-shadow: 0 1px 5px #34B0BE;
+        transition: .5s;
+    }
+
+    .nav_menu-visible {
+        left: 0;
+        border-bottom: 2px solid var(--color-title);
+        
+    }
+
+    .nav_menu-link:hover, 
+    .nav_menu-link_active{
+        color: #34B0BE;
+        text-shadow: 0 1px 5px #34B0BE;
+        transition: .5s
+    }
+}
+
+/* ======== HOME ===========*/
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65vh;
+    height: 65vh;
+    background: rgb(209 206 202 / 25%);
+    border-radius: 50%;
+    left: calc(50% - 32.5vh)
+  } 
+
+.home {
+    margin: 5rem;
+}
+
+.home__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.home__bar {
+    background: var(--color-font);
+    height: .5rem;
+    width: 80%;
+    padding-right: 2rem;
+}
+
+.home__red {
+    display: flex;
+    align-items: center;
+}
+
+.home__icon {
+    background: var(--color-text);
+    display: inline-block;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #242635;
+    font-size: 3rem;
+    margin-right: 2rem;
+    text-decoration: none;
+}
+
+.home__icon:hover {
+    background: #34B0BE;
+    color: #fff;
+}
+
+.home__sites {
+    position: relative;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    background: #4f505b;
+    padding: 3rem 0;
+    margin: 5rem auto;
+}
+
+.home__sites__icon {
+    background: var(--color-text);
+    display: inline-block;
+    border-radius: 1rem;
+    height: 8rem;
+    width: 15rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #242635;
+    font-size: 6rem;
+    text-decoration: none;
+}
+
+.home__sites__icon:hover {
+    background: #34B0BE;
+    color: #fff;
+}
+
+/* ============= Acerca de mi ============== */
+
+.about-me {
+    margin-top: 6.6rem;
+}
+
+.about-me_title {
+    margin-bottom: 4.5rem;
+}
+
+/* ============= SERVICES ============== */
+
+.services {
+    margin-top: 10rem;
+}
+
+.services_title {
+    margin-bottom: 5rem;
+}
+
+.card {
+    background: var(--color-font);
+    border-radius: 1rem;
+    width: 70%;
+    margin: 0 auto;
+    height: 100%;
+    padding-bottom: 2rem;
+    overflow: hidden;
+}
+
+.card_header {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    background-image: url('/assets/img/Ellipse\ 14.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.card_img img{
+    width: 100%;
+    margin: 5rem auto 0;
+}
+
+.card_body {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.card_title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card_text {
+    font-size: 1.7rem;
+    color: #9B9A9A;
+    margin-bottom: 3rem;
+}
+
+/* ============= Habilidades ============== */
+
+.skills {
+    margin-top: 10rem;
+}
+
+.skills_body {
+    width: 60%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.skills_subtitle {
+    color: var(--color-font);
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+.skills_percentage {
+    color: var(--color-title);
+    font-size: 2.5rem;
+}
+
+.skills_section {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.skills_percentage {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.skills_progress {
+    border: none;
+    border-radius: 2rem;
+    width: 100%;
+    height: 1.5rem;
+    }
+    
+    ::-webkit-progress-bar-value {background-color: var(--color-title); border-radius: 2rem;}
+    ::-webkit-progress-value {background-color: var(--color-title); border-radius: 2rem;}
+    ::-webkit-progress-bar {background-color: white; border-radius: 2rem;}
+    ::-moz-progress-bar {background-color: var(--color-title); border-radius: 2rem;}
+    
+
+/* ============= Portafolio ============== */
+
+.briefcase {
+    margin: 6rem;
+}
+
+.briefcase_header{
+    margin-bottom: 3rem;
+}
+
+.briefcase_body {
+    width: 95%;
+    margin: auto;
+}
+
+.briefcase_body img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ============= CONTACT ============== */
+
+.contact_container {
+    position: relative;
+    right: 1;
+}
+
+.contact_body-1 {
+    background: #fff;
+    width: 40%;
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+    
+}
+
+.contact_body-2 {
+    background: #fff;
+    width: 45%;
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+    margin-left: 55%;
+}
+
+.card_img_contact img:nth-of-type(1){
+    margin-top: -15%;
+}
+
+.card_img_contact img:nth-of-type(2){
+    width: 25%;
+    margin-left: 38%;
+    margin-top: -24%;
+}
+
+.card_title_contact {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card_text_contact {
+    font-size: 1.7rem;
+    color: #9B9A9A;
+    margin-bottom: 3rem;
+}
+
+/* ============= FOOTER ============== */
+
+.footer {
+    margin: 0;
+    height: 10rem;
+    width: 100%;
+    background: #4f505b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-title);
+    font-size: 1.5rem;
+}
+
+/* ============ Media Queries ================= */
+
+@media (max-width: 1024px) {
+
+    .contact_body-1 {
+        background: #fff;
+        width: 50%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        
+    }
+    
+    .contact_body-2 {
+        background: #fff;
+        width: 50%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        margin-left: 55%;
+    }
+
+    .card_title_contact {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card_text_contact {
+        font-size: 1.3rem;
+        color: #7c7878;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .home__container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    .home__experience {
+        position: absolute;
+        top: 0;
+    }
+
+    .home {
+        margin-top: 8rem;
+    }
+
+    .home__bar {
+        display: none;
+    }
+
+    .home__bar-sm {
+        background: var(--color-font);
+        height: .2rem;
+        width: 100%;
+        padding-right: 2rem;
+    }
+
+    .home__icon {
+        background: var(--color-text);
+        display: inline-block;
+        border-radius: 50%;
+        height: 2.5rem;
+        width: 2.5rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: #242635;
+        font-size: 1.5rem;
+        margin-right: 2rem;
+        text-decoration: none;
+    }
+
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40vh;
+        height: 40vh;
+        background: rgb(209 206 202 / 25%);
+        border-radius: 50%;
+        left: calc(50% - 20vh);
+      }
+
+
+    .home__sites {
+        position: relative;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-evenly;
+        width: 60%;
+        background: #4f505b;
+        padding: 2rem 1rem;
+        margin: 5rem auto;
+        
+    }
+    
+    .home__sites__icon {
+        background: var(--color-text);
+        display: inline-block;
+        border-radius: 1rem;
+        height: 4rem;
+        width: 7.5rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: #242635;
+        font-size: 3rem;
+    }
+
+    .title {
+        color: var(--color-title);
+        font-size: 5rem;
+    }
+    
+    .intro {
+        color: var(--color-font);
+        font-size: 5rem;
+    }
+
+    .title__text {
+        color: var(--color-font);
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    /* =============== Services 768px=============== */
+
+    .services {
+        margin-top: 10rem;
+    }
+    
+    .services_title {
+        margin-bottom: 5rem;
+    }
+    
+    .card {
+        background: var(--color-font);
+        border-radius: 1rem;
+        width: 60%;
+        margin: 0 auto;
+        height: 90%;
+        padding-bottom: 2rem;
+        overflow: hidden;
+    }
+    
+    .card_img img{
+        width: 100%;
+        margin: 5rem auto 0;
+    }
+    
+    .card_body {
+        margin-top: 1rem;
+        text-align: center;
+    }
+    
+    .card_title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card_text {
+        font-size: 1.4rem;
+        color: #9B9A9A;
+        margin-bottom: 3rem;
+    }
+
+    /* =============== Skills 768px=============== */
+
+    .skills {
+        margin-top: 10rem;
+    }
+    
+    .skills_body {
+        width: 60%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+    
+    .skills_subtitle {
+        color: var(--color-font);
+        font-size: 2.1rem;
+        margin-top: 2rem;
+    }
+    
+    .skills_percentage {
+        color: var(--color-title);
+        font-size: 2.1rem;
+    }
+    
+    .skills_percentage {
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    
+    .skills_progress {
+        border: none;
+        border-radius: 2rem;
+        width: 100%;
+        height: 1.2rem;
+    }
+
+    /* ============= Briefcase 768px ============== */
+
+    .briefcase {
+        margin: 6rem;
+    }
+
+    .briefcase_header{
+        margin-bottom: 3rem;
+    }
+
+    .briefcase_body {
+        width: 95%;
+        margin: auto;
+    }
+
+    .briefcase_body img{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* ============= Contact 768px ============== */
+
+    .contact_body-1 {
+        background: #fff;
+        width: 50%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        
+    }
+    
+    .contact_body-2 {
+        background: #fff;
+        width: 62%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        margin-left: 55%;
+    }
+
+    .card_title_contact {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card_text_contact {
+        font-size: 1.3rem;
+        color: #7c7878;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 628px) {
+
+    .home__bar-sm {
+        background: var(--color-font);
+        height: .2rem;
+        width: 100%;
+        padding-right: 2rem;
+    }
+
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30vh;
+        height: 30vh;
+        background: rgb(209 206 202 / 25%);
+        border-radius: 50%;
+        left: calc(50% - 15vh);
+    }
+
+    .title {
+        color: var(--color-title);
+        font-size: 3rem;
+    }
+    
+    .intro {
+        color: var(--color-font);
+        font-size: 3rem;
+    }
+
+    .title__text {
+        color: var(--color-font);
+        font-size: 2rem;
+        font-weight: 500;
+    }
+/* =============== Services 628px=============== */
+
+    .services {
+        margin-top: 10rem;
+    }
+    
+    .services_title {
+        margin-bottom: 5rem;
+    }
+    
+    .card {
+        background: var(--color-font);
+        border-radius: 1rem;
+        width: 70%;
+        margin: 0 auto;
+        height: 90%;
+        padding-bottom: 2rem;
+        overflow: hidden;
+    }
+    
+    .card_img img{
+        width: 100%;
+        margin: 5rem auto 0;
+    }
+    
+    .card_body {
+        margin-top: 1rem;
+        text-align: center;
+    }
+    
+    .card_title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card_text {
+        font-size: 1.4rem;
+        color: #9B9A9A;
+        margin-bottom: 3rem;
+    }
+/* =============== Skills 628px=============== */
+
+    .skills {
+        margin-top: 10rem;
+    }
+    
+    .skills_body {
+        width: 60%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+    
+    .skills_subtitle {
+        color: var(--color-font);
+        font-size: 1.8rem;
+        margin-top: 2rem;
+    }
+    
+    .skills_percentage {
+        color: var(--color-title);
+        font-size: 1.8rem;
+    }
+    
+    .skills_percentage {
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    
+    .skills_progress {
+        border: none;
+        border-radius: 2rem;
+        width: 100%;
+        height: 1rem;
+    }
+
+    /* ============= Briefcase 628px ============== */
+
+    .briefcase {
+        margin: 6rem;
+    }
+
+    .briefcase_header{
+        margin-bottom: 3rem;
+    }
+
+    .briefcase_body {
+        width: 100%;
+        margin: auto;
+    }
+
+    .briefcase_body img{
+        width: 120%;
+        margin: 0 0 0 -3rem;
+    }
+
+    .card_title_contact {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card_text_contact {
+        font-size: 1.3rem;
+        color: #7c7878;
+        margin-bottom: 3rem;
+    }
+
+    /* ============= Contact 628px ============== */
+
+    .contact_body-1 {
+        background: #fff;
+        width: 50%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        
+    }
+    
+    .contact_body-2 {
+        background: #fff;
+        width: 64%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        margin-left: 55%;
+    }
+
+    .card_title_contact {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card_text_contact {
+        font-size: 1.1rem;
+        color: #7c7878;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .home__sites {
+        position: relative;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-evenly;
+        width: 60%;
+        background: #4f505b;
+        padding: 1.5rem .2rem;
+        margin: 5rem auto;
+        
+    }
+    
+    .home__sites__icon {
+        background: var(--color-text);
+        display: inline-block;
+        border-radius: 1rem;
+        height: 3rem;
+        width: 5.2rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: #242635;
+        font-size: 2.3rem;
+    }
+
+    .title {
+        color: var(--color-title);
+        font-size: 3rem;
+    }
+    
+    .intro {
+        color: var(--color-font);
+        font-size: 3rem;
+    }
+
+    .title__text {
+        color: var(--color-font);
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    /* =============== About Me 425px =============== */
+    .about-me_text {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    /* =============== Services 567px =============== */
+
+    .card {
+        background: var(--color-font);
+        border-radius: 1rem;
+        width: 65%;
+        margin: 0 auto;
+        height: 100%;
+        padding-bottom: rem;
+        overflow: hidden;
+    }
+
+    .card_img img{
+        width: 90%;
+        margin: 5rem auto 0;
+    }
+       
+    .card_title {
+        font-size: 1.6rem;
+        margin-bottom: .8rem;
+    }
+    
+    .card_text {
+        font-size: 1.4rem;
+        color: #9B9A9A;
+        margin-bottom: 3rem;
+    }
+
+    /* ============= Briefcase 576px ============== */
+
+    .briefcase {
+        margin: 6rem;
+    }
+
+    .briefcase_header{
+        margin-bottom: 3rem;
+    }
+
+    .briefcase_body {
+        width: 100%;
+        margin: auto;
+    }
+
+    .briefcase_body img{
+        width: 140%;
+        margin: 0 0 0 -5rem;
+    }
+
+    /* ============= Contact 576px ============== */
+
+    .contact_body-1 {
+        background: #fff;
+        width: 55%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        
+    }
+    
+    .contact_body-2 {
+        background: #fff;
+        width: 68%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        margin-left: 55%;
+    }
+
+    .card_title_contact {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card_text_contact {
+        font-size: 1.1rem;
+        color: #7c7878;
+        margin-bottom: 3rem;
+    }
+
+}
+
+@media (max-width: 425px){
+
+    .home__sites {
+        position: relative;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-evenly;
+        width: 65%;
+        background: #4f505b;
+        padding: 1.5rem .2rem;
+        margin: 5rem auto;
+        
+    }
+    
+    .home__sites__icon {
+        background: var(--color-text);
+        display: inline-block;
+        border-radius: 1rem;
+        height: 3rem;
+        width: 4.8rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: #242635;
+        font-size: 2.2rem;
+    }
+
+    .home__experience {
+        position: absolute;
+        top: 0;
+        left: 20rem;
+    }
+
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22vh;
+        height: 22vh;
+        background: rgb(209 206 202 / 25%);
+        border-radius: 50%;
+        left: calc(50% - 11vh);
+    }
+
+    .home__bar-sm {
+        background: var(--color-font);
+        height: .2rem;
+        width: 90%;
+        padding-right: 2rem;
+    }
+
+    .title {
+        color: var(--color-title);
+        font-size: 2rem;
+    }
+    
+    .intro {
+        color: var(--color-font);
+        font-size: 2rem;
+    }
+
+    .title__text {
+        color: var(--color-font);
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    
+    /* =============== About Me 425px =============== */
+    .about-me_text {
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    /* =============== Services 425px =============== */
+
+    .card {
+        background: var(--color-font);
+        border-radius: 1rem;
+        width: 85%;
+        margin: 0 auto;
+        height: 100%;
+        padding-bottom: rem;
+        overflow: hidden;
+    }
+
+    .card_img img{
+        width: 90%;
+        margin: 5rem auto 0;
+    }
+       
+    .card_title {
+        font-size: 1.6rem;
+        margin-bottom: .8rem;
+    }
+    
+    .card_text {
+        font-size: 1.4rem;
+        color: #9B9A9A;
+        margin-bottom: 3rem;
+    }
+
+    /* =============== Skills 425px =============== */
+
+    .skills {
+        margin-top: 10rem;
+    }
+    
+    .skills_body {
+        width: 60%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+    
+    .skills_subtitle {
+        color: var(--color-font);
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+    
+    .skills_percentage {
+        color: var(--color-title);
+        font-size: 1.2rem;
+    }
+    
+    .skills_percentage {
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    
+    .skills_progress {
+        border: none;
+        border-radius: 2rem;
+        width: 100%;
+        height: 1rem;
+    }
+    
+    /* ============= Briefcase 425px ============== */
+
+    .briefcase {
+        margin: 6rem;
+    }
+
+    .briefcase_header{
+        margin-bottom: 3rem;
+    }
+
+    .briefcase_body {
+        width: 100%;
+        margin: auto;
+    }
+
+    .briefcase_body img{
+        width: 140%;
+        margin: 0 0 0 -3rem;
+    }
+
+    /* ============= Contact 425px ============== */
+
+    .contact_body-1 {
+        background: #fff;
+        width: 55%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        margin-left: -30%;
+    }
+    
+    .contact_body-2 {
+        background: #fff;
+        width: 90%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        margin-left: 35%;
+    }
+
+    .card_title_contact {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card_text_contact {
+        font-size: 1rem;
+        color: #7c7878;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .home__sites {
+        position: relative;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-evenly;
+        width: 65%;
+        background: #4f505b;
+        padding: 1.5rem .2rem;
+        margin: 5rem auto;
+        
+    }
+    
+    .home__sites__icon {
+        background: var(--color-text);
+        display: inline-block;
+        border-radius: 1rem;
+        height: 3rem;
+        width: 4.4rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: #242635;
+        font-size: 2rem;
+    }
+
+    .home__experience {
+        position: absolute;
+        top: 0;
+        left: 17rem;
+    }
+
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22vh;
+        height: 22vh;
+        background: rgb(209 206 202 / 25%);
+        border-radius: 50%;
+        left: calc(50% - 11vh);
+    }
+
+    .home__bar-sm {
+        background: var(--color-font);
+        height: .2rem;
+        width: 90%;
+        padding-right: 2rem;
+    }
+
+    .title {
+        color: var(--color-title);
+        font-size: 1.8rem;
+    }
+    
+    .intro {
+        color: var(--color-font);
+        font-size: 1.8rem;
+    }
+
+    .title__text {
+        color: var(--color-font);
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    /* =============== Services 375px =============== */
+
+    .card {
+        background: var(--color-font);
+        border-radius: 1rem;
+        width: 100%;
+        margin: 0 auto;
+        height: 100%;
+        padding-bottom: rem;
+        overflow: hidden;
+    }
+
+    .card_img img{
+        width: 90%;
+        margin: 5rem auto 0;
+    }
+       
+    .card_title {
+        font-size: 1.4rem;
+        margin-bottom: .8rem;
+    }
+    
+    .card_text {
+        font-size: 1.2rem;
+        color: #9B9A9A;
+        margin-bottom: 3rem;
+    }
+
+    .about-me_text {
+        margin-top: 1.5rem;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    /* =============== Skills 375px =============== */
+
+    .skills {
+        margin-top: 10rem;
+    }
+    
+    .skills_body {
+        width: 60%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+    
+    .skills_subtitle {
+        color: var(--color-font);
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+    
+    .skills_percentage {
+        color: var(--color-title);
+        font-size: 1.2rem;
+    }
+    
+    .skills_percentage {
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    
+    .skills_progress {
+        border: none;
+        border-radius: 2rem;
+        width: 100%;
+        height: 1rem;
+    }
+
+    /* ============= Contact 375px ============== */
+
+    .contact_body-1 {
+        background: #fff;
+        width: 65%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        margin-left: -30%;
+    }
+    
+    .contact_body-2 {
+        background: #fff;
+        width: 95%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        margin-left: 33%;
+    }
+
+    .card_title_contact {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card_text_contact {
+        font-size: 1rem;
+        color: #7c7878;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .home__name {
+        margin-right: 3rem;
+    }
+
+    .home__icon {
+        margin-top: .8rem;
+        background: var(--color-text);
+        display: inline-block;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: #242635;
+        font-size: 1.2rem;
+        margin-right: .5rem;
+        text-decoration: none;
+    }
+
+    .home__sites {
+        position: relative;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-evenly;
+        width: 80%;
+        background: #4f505b;
+        padding: 1rem .2rem;
+        margin: 5rem auto;
+        
+    }
+    
+    .home__sites__icon {
+        background: var(--color-text);
+        display: inline-block;
+        border-radius: 1rem;
+        height: 2.8rem;
+        width: 3.8rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: #242635;
+        font-size: 1.8rem;
+    }
+
+    .home__experience {
+        position: absolute;
+        top: 0;
+        left: 14rem;
+    }
+
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22vh;
+        height: 22vh;
+        background: rgb(209 206 202 / 25%);
+        border-radius: 50%;
+        left: calc(50% - 11vh);
+    }
+
+    .home__bar-sm {
+        background: var(--color-font);
+        height: .2rem;
+        width: 90%;
+        padding-right: 2rem;
+    }
+
+    .title {
+        color: var(--color-title);
+        font-size: 1.5rem;
+    }
+    
+    .intro {
+        color: var(--color-font);
+        font-size: 1.5rem;
+    }
+
+    .title__text {
+        color: var(--color-font);
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .about-me_text {
+        margin-top: 1.5rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* ============= Briefcase 425px ============== */
+
+    .briefcase {
+        margin: 6rem;
+    }
+
+    .briefcase_header{
+        margin-bottom: 3rem;
+    }
+
+    .briefcase_body {
+        width: 100%;
+        margin: auto;
+    }
+
+    .briefcase_body img{
+        width: 140%;
+        margin: 0 0 0 -1.7rem;
+    }
+
+    /* ============= Contact 320px ============== */
+
+    .contact_body-1 {
+        background: #fff;
+        width: 65%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        margin-left: -30%;
+    }
+    
+    .contact_body-2 {
+        background: #fff;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        margin-left: 30%;
+    }
+
+    .card_title_contact {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card_text_contact {
+        font-size: .9rem;
+        color: #7c7878;
+        margin-bottom: 3rem;
+    }
+
+}
