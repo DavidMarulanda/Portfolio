@@ -24,14 +24,14 @@ body {
 }
 
 img {
-    width: 100%;
+    width: 90%;
 }
 
 /* =========== Helper ============= */
 
 .title {
     color: var(--color-title);
-    font-size: 10rem;
+    font-size: 5rem;
 }
 
 .subtitle {
@@ -40,7 +40,7 @@ img {
 
 .intro {
     color: var(--color-font);
-    font-size: 10rem;
+    font-size: 5rem;
 }
 
 .title__text {
@@ -186,6 +186,7 @@ img {
 /* ======== HOME ===========*/
 
 .circle {
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,7 +244,6 @@ img {
     border-radius: 1rem;
     display: flex;
     justify-content: space-evenly;
-    width: 50%;
     background: #4f505b;
     padding: 3rem 0;
     margin: 5rem auto;
@@ -446,7 +446,7 @@ img {
 /* ============= FOOTER ============== */
 
 .footer {
-    margin: 0;
+    margin-top: 4rem;
     height: 10rem;
     width: 100%;
     background: #4f505b;
@@ -551,7 +551,6 @@ img {
         border-radius: 1rem;
         display: flex;
         justify-content: space-evenly;
-        width: 60%;
         background: #4f505b;
         padding: 2rem 1rem;
         margin: 5rem auto;
@@ -895,7 +894,6 @@ img {
         border-radius: 1rem;
         display: flex;
         justify-content: space-evenly;
-        width: 60%;
         background: #4f505b;
         padding: 1.5rem .2rem;
         margin: 5rem auto;
@@ -1026,7 +1024,6 @@ img {
         border-radius: 1rem;
         display: flex;
         justify-content: space-evenly;
-        width: 65%;
         background: #4f505b;
         padding: 1.5rem .2rem;
         margin: 5rem auto;
@@ -1215,7 +1212,6 @@ img {
         border-radius: 1rem;
         display: flex;
         justify-content: space-evenly;
-        width: 65%;
         background: #4f505b;
         padding: 1.5rem .2rem;
         margin: 5rem auto;
@@ -1403,7 +1399,6 @@ img {
         border-radius: 1rem;
         display: flex;
         justify-content: space-evenly;
-        width: 80%;
         background: #4f505b;
         padding: 1rem .2rem;
         margin: 5rem auto;
